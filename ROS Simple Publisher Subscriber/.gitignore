@@ -1,0 +1,3 @@
+CMakeLists.txt
+!chatapp/CMakeLists.txt
+.chat.old
