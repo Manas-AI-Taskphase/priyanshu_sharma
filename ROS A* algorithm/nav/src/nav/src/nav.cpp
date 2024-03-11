@@ -7,6 +7,7 @@
 #include <cmath>
 #include <sstream>
 
+// using common std commands
 using std::cout;
 using std::getline;
 using std::cin;
@@ -26,6 +27,7 @@ struct Node {
     }
 };
 
+// structure to compare nodes 
 struct CompareNodes {
     bool operator()(const Node* lhs, const Node* rhs) const {
         return lhs->totalCost() > rhs->totalCost();
@@ -52,8 +54,6 @@ std::vector<Node*> astar(Node* start, Node* goal, const std::vector<std::vector<
 
         closedSet.push_back(current);
 
-        // Assuming adjacent nodes are available and stored in a vector called neighbors
-        // with their corresponding costs and heuristic values calculated
         std::vector<Node*> neighbors; // Populate neighbors vector with adjacent nodes
 
         for (Node* neighbor : neighbors) {
@@ -119,9 +119,11 @@ void callBack(const nav_msgs::OccupancyGrid::ConstPtr& data)
 
 int main(int argc, char ** argv)
 {
+    // initialise ros
+
 	ros::init(argc, argv, "nav");
 	ros::NodeHandle n;
-	ros::Subscriber map = n.subscribe("map", 1, callBack);
+	ros::Subscriber map = n.subscribe("map", 1, callBack); // subscribing to the map topic
 	ros::spin();
 	return 0;
 
