@@ -1,0 +1,2 @@
+nav
+-DCATKIN_DEVEL_PREFIX=/home/priyanshu/nav/devel -DCMAKE_INSTALL_PREFIX=/home/priyanshu/nav/install -G Unix Makefiles
