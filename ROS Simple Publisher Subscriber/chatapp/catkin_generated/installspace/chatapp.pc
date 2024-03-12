@@ -1,8 +1,0 @@
-prefix=/home/priyanshu/catkin_ws/install
-
-Name: chatapp
-Description: Description of chatapp
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
